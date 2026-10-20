@@ -13,7 +13,6 @@ Prayer times for **Québec City, Canada** — check off your 5 daily prayers and
 - Check-ins are saved in your browser only (`localStorage`) — no account, no server, nothing leaves your device
 
 ## Run it
-Open `index.html`, or use GitHub Pages (Settings → Pages → Deploy from branch `main`, folder `/ (root)`), then visit:
 `https://saadbelhxj.github.io/salat-streak/`
 
 ## Files
