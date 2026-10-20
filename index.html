@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Salat Streak — Québec City Prayer Times</title>
+<meta name="description" content="Prayer times for Québec City. Check off your 5 daily prayers and keep your streak alive.">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌙</text></svg>">
+</head>
+<body>
+<header class="hero">
+  <div class="hero-top">
+    <h1>🌙 Salat Streak</h1>
+    <div class="streak-badge" title="Current streak">
+      <span class="flame">🔥</span>
+      <span id="streakCount">0</span>
+      <small>day streak</small>
+    </div>
+  </div>
+  <p class="location">📍 Québec City, Canada</p>
+  <p id="gregorianDate" class="date-line">Loading date…</p>
+  <p id="hijriDate" class="hijri-line"></p>
+
+  <div class="next-prayer" id="nextPrayerBox">
+    <span>Next prayer</span>
+    <strong id="nextPrayerName">—</strong>
+    <span id="nextPrayerCountdown">—</span>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><strong id="todayCount">0/5</strong><small>Today</small></div>
+    <div class="stat"><strong id="bestStreak">0</strong><small>Best streak</small></div>
+    <div class="stat"><strong id="totalDays">0</strong><small>Perfect days</small></div>
+  </div>
+</header>
+
+<main>
+  <section class="day-nav">
+    <button id="prevDay" aria-label="Previous day">‹</button>
+    <div>
+      <strong id="selectedLabel">Today</strong>
+      <div class="progress"><div id="progressBar"></div></div>
+      <small id="progressText">0 of 5 prayers done</small>
+    </div>
+    <button id="nextDay" aria-label="Next day">›</button>
+  </section>
+
+  <p id="completeBanner" class="banner hidden">✅ All 5 prayers done — day complete, streak secured!</p>
+  <p id="errorBox" class="banner error hidden"></p>
+
+  <section id="prayerList" class="prayer-list">
+    <p class="loading">Loading prayer times…</p>
+  </section>
+
+  <p class="sunrise-note" id="sunriseNote"></p>
+
+  <section class="history">
+    <h2>Last 28 days</h2>
+    <div id="historyGrid" class="history-grid"></div>
+    <p class="legend"><span class="dot full"></span> 5/5 &nbsp; <span class="dot partial"></span> some &nbsp; <span class="dot empty"></span> none</p>
+  </section>
+
+  <section class="settings">
+    <label>Asr calculation
+      <select id="schoolSelect">
+        <option value="0">Shafi / Maliki / Hanbali</option>
+        <option value="1">Hanafi</option>
+      </select>
+    </label>
+    <p class="method-note">Times: Aladhan API · ISNA method · America/Toronto. Your check-ins are saved only on this device (browser storage).</p>
+  </section>
+</main>
+
+<footer>Made for consistency — one day, five prayers, at a time.</footer>
+<script src="app.js"></script>
+</body>
+</html>
